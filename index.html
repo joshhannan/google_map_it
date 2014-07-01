@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Google Map It Plugin</title>
+		<link rel="stylesheet" type="text/css" href="css/global.css">
+	</head>
+	<body>
+		<header class="block">
+			<div class="container">
+				<h1>Google Map It Plugin</h1>
+				<p>Extensive coverage of the Google Maps API.  Can do pretty much anything you need.</p>
+			</div><!--/container-->
+		</header><!--/block-->
+		<section class="block">
+			<div class="container">
+				<div class="left block">
+					<div class="quarter">
+						<div id="google-map"></div><!--/google-map-->
+					</div><!--/quarter-->
+					<div class="three_quarters">
+						<h2>Totally Customizable and works across all browsers.</h2>
+						<p>Utilizing Google Maps API v3, this plugin can do pretty much anything you need it to quickly and easily.</p>
+					</div><!--/three_quarters-->
+				</div><!---/block-->
+			</div><!--/container-->
+		</section>
+		<footer>
+			<div class="container">
+
+			</div><!--/container-->
+		</footer>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'></script>
+		<script src="google_map_it.js"></script>
+		<script>
+			var styles = [{featureType:"water",stylers:[{visibility:"on"},{color:"#b5cbe4"}]},{featureType:"landscape",stylers:[{color:"#efefef"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{color:"#83a5b0"}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#bdcdd3"}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#ffffff"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#e3eed3"}]},{featureType:"administrative",stylers:[{visibility:"on"},{lightness:"33"}]},{featureType:"road"},{featureType:"poi.park",elementType:"labels",stylers:[{visibility:"on"},{lightness:"20"}]},{featureType:"road",stylers:[{lightness:"20"}]}];
+			$(function() {
+				$('#google-map').google_map_it({
+					marker_url: 'images/custom_marker.png'
+				});
+			});
+		</script>
+	</body>
+</html>
